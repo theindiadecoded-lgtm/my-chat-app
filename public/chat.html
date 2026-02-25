@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-container">
+
+  <div class="chat-header">
+    <h3>Secure Chat</h3>
+    <div>
+      <span id="userCount">0 Online</span>
+      <button onclick="toggleTheme()">🌙</button>
+    </div>
+  </div>
+
+  <div id="messages"></div>
+
+  <div class="input-area">
+    <input id="msg" placeholder="Type message 😊">
+    <input type="file" id="imageInput" hidden>
+    <button onclick="document.getElementById('imageInput').click()">📎</button>
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+</div>
+
+<audio id="notifySound" src="notify.mp3"></audio>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
